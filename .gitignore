@@ -1,0 +1,11 @@
+/build/
+/.vscode/
+*.exe
+*.obj
+*.o
+*.pdb
+*.ilk
+*.dll
+*.so
+*.dylib
+*.out
