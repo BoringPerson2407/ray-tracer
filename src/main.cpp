@@ -6,6 +6,10 @@ int main()
     const int image_width = 400;
     const int image_height = 200;
 
+    double red_percentage, green_percentage;
+
+    int red, green;
+
     std::ofstream outfile("images/image.ppm");
     if (!outfile) {
         std::cerr << "Failed to create a file!" << std::endl;
@@ -19,10 +23,17 @@ int main()
     int counter = 0;
     for (int y = image_height - 1; y >= 0; y--)
     {
-        for(int x = image_width - 1; x >= 0; x--)
+        for(int x = 0; x < image_width; x++)
         {
-            outfile << "255 0 0\n";
-            std:: cout << counter++ << std::endl;
+            red_percentage = double(x) / (image_width - 1);
+            green_percentage = double(y) / (image_height - 1);
+
+            red = red_percentage * 255;
+            green = green_percentage * 255;
+
+            outfile << red << ' ' << green << ' ' << 0 << '\n';
+
+
         }
     
     }
