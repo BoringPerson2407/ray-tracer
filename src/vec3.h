@@ -119,3 +119,7 @@ inline std::ostream& operator<<(std::ostream &out, const Vec3 &v)
 {
     return out << v.x << ' ' << v.y << ' ' << v.z;
 }
+
+
+using Point3 = Vec3;
+using Color = Vec3;
